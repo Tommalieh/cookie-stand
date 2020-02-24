@@ -1,0 +1,13 @@
+body{
+    line-height: 170%;
+    padding: 2%;
+}
+
+h3{
+    font-weight: bold;
+}
+
+li{
+    list-style: circle;
+    margin-left: 2%;
+}
