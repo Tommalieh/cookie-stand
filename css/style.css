@@ -12,3 +12,19 @@ li{
     list-style: circle;
     margin-left: 2%;
 }
+
+td, th{
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+th{
+    font-weight: bold;
+}
+
+.name{
+    font-weight: bold;
+}
+
