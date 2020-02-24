@@ -1,2 +1,3 @@
-# cookie-stand
-This website is made so you can book and buy all you want from pat's delicious slamon cookies
+# Cookie-Stand Project
+
+#### This website demonstrated the only place to order and buy the delecious salmon cookies made by Pat.
