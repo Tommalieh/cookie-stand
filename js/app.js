@@ -1,5 +1,7 @@
 'use strict'
-
+var theaderEl;
+var tfooterEl;
+var tableEl;
 
 function Location(name, lowestValue, highestValue, meanValue) {
     this.name = name;
@@ -13,11 +15,6 @@ Location.prototype.custPerHour = function () {
     this.custNumberPerHour = randNumb(this.lowestValue, this.highestValue);
 };
 
-function randNumb(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min;
-}
 
 Location.prototype.render = function () {
 
@@ -77,30 +74,12 @@ Location.prototype.render = function () {
 };
 
 
-var container = document.getElementById('container');
-console.log(container);
 
-var mainEl = document.createElement('main');
-container.appendChild(mainEl);
+createHtmlStructure();
 
-var headerEl = document.createElement('header');
-container.appendChild(headerEl);
+createTableHeader();
 
-var footerEl = document.createElement('footer');
-container.appendChild(footerEl);
-
-var tableEl = document.createElement('table');
-mainEl.appendChild(tableEl);
-
-var theaderEl = document.createElement('thead');
-tableEl.appendChild(theaderEl);
-
-var tfooterEl = document.createElement('tfoot');
-tableEl.appendChild(tfooterEl);
-
-
-
-
+createTableFooter();
 
 var seattle = new Location('Seattle', 23, 64, 6.3);
 seattle.render();
@@ -117,38 +96,109 @@ paris.render();
 var lima = new Location('Lima', 2, 16, 4.6);
 lima.render();
 
-var totalCookiesSoldEachHour = 0;
-var locations = [seattle, tokyo, dubai, paris, lima];
-var totalCol = [];
-var thEl = document.createElement('th');
-theaderEl.appendChild(thEl);
-thEl.textContent = '';
-var thEl = document.createElement('th');
-tfooterEl.appendChild(thEl);
-thEl.textContent = 'Total';
+renderTotalHour();
 
-for (var i = 0; i <= 13; i++) {
-    var sumCol = seattle.cookiesPerHourSold[i] + tokyo.cookiesPerHourSold[i] + dubai.cookiesPerHourSold[i] + paris.cookiesPerHourSold[i] + lima.cookiesPerHourSold[i];
-    totalCol.push(sumCol);
-    totalCookiesSoldEachHour = totalCookiesSoldEachHour + sumCol;
 
-    if (i === 13) {
-        totalCol.push()
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Function Appendix//
+
+function randNumb(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+
+function createHtmlStructure() {
+    var container = document.getElementById('container');
+    console.log(container);
+
+    var mainEl = document.createElement('main');
+    container.appendChild(mainEl);
+
+    var headerEl = document.createElement('header');
+    container.appendChild(headerEl);
+
+    var footerEl = document.createElement('footer');
+    container.appendChild(footerEl);
+
+    tableEl = document.createElement('table');
+    mainEl.appendChild(tableEl);
+}
+
+
+function createTableHeader() {
+    theaderEl = document.createElement('thead');
+    tableEl.appendChild(theaderEl);
+}
+
+
+function createTableFooter() {
+    tfooterEl = document.createElement('tfoot');
+    tableEl.appendChild(tfooterEl);
+}
+
+
+function renderTotalHour() {
+    var totalCookiesSoldEachHour = 0;
+    var locations = [seattle, tokyo, dubai, paris, lima];
+    var totalCol = [];
     var thEl = document.createElement('th');
     theaderEl.appendChild(thEl);
-    thEl.textContent = seattle.time[i];
+    thEl.textContent = '';
     var thEl = document.createElement('th');
     tfooterEl.appendChild(thEl);
-    thEl.textContent = totalCol[i];
+    thEl.textContent = 'Total';
+
+    for (var i = 0; i <= 13; i++) {
+        var sumCol = seattle.cookiesPerHourSold[i] + tokyo.cookiesPerHourSold[i] + dubai.cookiesPerHourSold[i] + paris.cookiesPerHourSold[i] + lima.cookiesPerHourSold[i];
+        totalCol.push(sumCol);
+        totalCookiesSoldEachHour = totalCookiesSoldEachHour + sumCol;
+
+        if (i === 13) {
+            totalCol.push()
+        }
+        var thEl = document.createElement('th');
+        theaderEl.appendChild(thEl);
+        thEl.textContent = seattle.time[i];
+        var thEl = document.createElement('th');
+        tfooterEl.appendChild(thEl);
+        thEl.textContent = totalCol[i];
+    }
+
+
+    var thEl = document.createElement('th');
+    theaderEl.appendChild(thEl);
+    thEl.textContent = 'Daily Location Total';
+    var thEl = document.createElement('th');
+    tfooterEl.appendChild(thEl);
+    thEl.textContent = totalCookiesSoldEachHour;
 }
-var thEl = document.createElement('th');
-theaderEl.appendChild(thEl);
-thEl.textContent = 'Daily Location Total';
-var thEl = document.createElement('th');
-tfooterEl.appendChild(thEl);
-thEl.textContent = totalCookiesSoldEachHour;
-
-
-
 
