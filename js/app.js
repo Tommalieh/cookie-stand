@@ -1,4 +1,5 @@
 'use strict'
+
 var theaderEl;
 var tfooterEl;
 var tableEl;
@@ -127,7 +128,7 @@ renderTotalHour();
 
 
 
-//Function Appendix//
+//Functions Appendix//
 
 function randNumb(min, max) {
     min = Math.ceil(min);
