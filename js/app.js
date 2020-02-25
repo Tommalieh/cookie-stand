@@ -19,7 +19,6 @@ function randNumb(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-
 Location.prototype.render = function () {
 
 
@@ -77,23 +76,18 @@ Location.prototype.render = function () {
 
 };
 
+
 var container = document.getElementById('container');
 console.log(container);
-
-function createHeader(){
-var headerEl = document.createElement('header');
-container.appendChild(headerEl);
-}
-createHeader()
 
 var mainEl = document.createElement('main');
 container.appendChild(mainEl);
 
-function createFooter(){
+var headerEl = document.createElement('header');
+container.appendChild(headerEl);
+
 var footerEl = document.createElement('footer');
 container.appendChild(footerEl);
-}
-createFooter();
 
 var tableEl = document.createElement('table');
 mainEl.appendChild(tableEl);
@@ -103,6 +97,8 @@ tableEl.appendChild(theaderEl);
 
 var tfooterEl = document.createElement('tfoot');
 tableEl.appendChild(tfooterEl);
+
+
 
 
 
@@ -152,3 +148,7 @@ thEl.textContent = 'Daily Location Total';
 var thEl = document.createElement('th');
 tfooterEl.appendChild(thEl);
 thEl.textContent = totalCookiesSoldEachHour;
+
+
+
+

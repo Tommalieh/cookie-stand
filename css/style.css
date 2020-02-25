@@ -1,20 +1,176 @@
-body{
-    line-height: 170%;
-    padding: 2%;
+html{
+    background-image: url(../1.PNG);
+    background-color: black;
+    height: 600%;
+    color: white;
+}
+
+.div{
+    display: block;
+    clear: both;
+    text-align: center;
+    padding-top: 20%;
+    margin-bottom: 20%;
+}
+
+/* Set the size of the div element that contains the map */
+#map {
+    height: 400px;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
+   }
+
+
+
+header{
+    background-color: black;
+    height: 20%;
+    opacity: .8;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: white;
+    z-index: 10;
+}
+
+#logo{
+    width: 11.5%;
+    padding-top: .2%;
+    margin-left: 3% ;
+    /* border: 2px solid wheat; */
+    border-radius: 0% 0% 5% 5%;
+    float: left;
+}
+
+h2{
+    border: 3px solid black;
+
+    font-size: 500%;
+    color: #ff9205;
+    padding: 5%;
+    background-color: rgba(0, 0, 0, 0.452);
+
+
 }
 
 h3{
+    font-size: 200%;
+    color: #ff9205;
+    padding: 1%;
     font-weight: bold;
     
 }
 
+ul{
+    padding-right: 3%;
+}
 li{
-    list-style: circle;
-    margin-left: 2%;
+    float: right;
+    padding: 8% 2%;
+    font-size: x-large;
+    
+}
+a:hover{
+    color: #ffa805;
+    
 }
 
+a{
+    text-decoration: none;
+    color: #ffba5dcf;
+
+}
+
+#main{
+    width: 80%;
+    margin: 15% 10% 20% 10%;
+    /* height: 100%; */
+    }
+
+.col2{
+    width: 42.5%;
+    margin: 10% 2.5%;
+    float: left;
+    text-align: center;
+    /* clear: both; */
+    /* border: 3px solid black; */
+
+}
+
+p{
+    padding: 5%;
+    height: 200%;
+    background-color: rgba(0, 0, 0, 0.452);
+    line-height: 143.5%;
+    font-size: 100%;
+    
+}
+.col1{
+    /* border: 3px solid black; */
+    width: 42.5%;
+    margin: 10% 2.5%;
+    float: right;
+    text-align: center;
+    /* clear: both; */
+}
+
+img{
+    border: 3px solid black;
+    width: 100%;
+    -webkit-filter: drop-shadow(12px 12px 25px rgb(0, 0, 0));
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    }
+
+footer{
+    margin-top: 175%;
+    background-color: black;
+    /* height: 100%; */
+    opacity: .8;
+    width: 100%;
+    color: white;
+}
+
+
+
+
+
+table{
+    margin:25% auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 td, th{
-    border: 1px solid black;
+    border: 1px solid white;
     text-align: center;
     padding: 10px;
     vertical-align: middle;
