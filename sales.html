@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="sales.css">
 </head>
+
 <body>
     <div id="container"></div>
     <header>
@@ -19,6 +21,29 @@
             </ul>
         </nav>
     </header>
+
+    <form id="locationID">
+        <fieldset>
+            <legend>Choose your favorite monster</legend>
+            <label for="name">Shop Name:</label>
+            <input type="text" name='name' id="name" placeholder="e.g. London" required>
+
+            <label for="lowestValue">Least amount of customers each day:</label>
+            <input type="number" name='lowestValue' id="lowestValue" placeholder="e.g. 5" min="0" required>
+
+            <label for="highestValue">Maximum amount of customers each day:</label>
+            <input type="number" name='highestValue' id="highestValue" placeholder="e.g. 23" min="0" required>
+
+            <label for="meanValue">Average amount of cookies sold per person:</label>
+            <input type="number" name='meanValue' id="meanValue" placeholder="e.g. 14" required>
+
+            <input type="submit">
+        </fieldset>
+    </form>
+
+
+
     <script src="js/app.js"></script>
 </body>
+
 </html>
