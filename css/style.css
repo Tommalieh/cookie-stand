@@ -1,5 +1,5 @@
 html{
-    background-image: url(../1.PNG);
+    background-image: url(../1.png);
     background-color: black;
     height: 600%;
     color: white;
@@ -23,7 +23,7 @@ html{
 
 header{
     background-color: black;
-    height: 20%;
+    height: 28%;
     opacity: .8;
     position: fixed;
     top: 0;
