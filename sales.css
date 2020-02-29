@@ -2,6 +2,8 @@ html{
     background-image: url(1.png);
     background-color: black;
     color: white;
+    font-family:'Noto Serif KR';
+    scroll-behavior: smooth
 }
 
 header{
@@ -47,11 +49,10 @@ a{
 
 
 table{
-    margin:25% auto;
+    margin:20% auto 5% auto;
     font-size: xx-large;
     box-shadow: 10px 5px 5px 10px #00000087;
-
-    
+    font-family: font-family: 'Average Sans';
 }
 
 
@@ -71,3 +72,45 @@ th{
 .name{
     font-weight: bold;
 }
+
+form{
+    text-align: center;
+    margin-top: 0;
+    font-size: 112%;
+}
+
+legend{
+    margin-bottom: 3%;
+    font-size: x-large;
+
+
+}
+input{
+    margin: auto;
+    display: block;
+    margin-bottom: 1.2%;
+    margin-top: 1%;
+    padding: 0.5% 3% 0.5% 0;
+}
+
+input[type="submit" i]{
+    text-align: center;
+    padding: 10px 34px;
+    background-color: #b3651be3;
+    color: wheat;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+button{
+    display: block;
+    margin: 0 auto 4% auto;
+    padding: 1% 3%;
+    background-color: rgb(83, 78, 78);
+    color: wheat;
+}
+
+
+

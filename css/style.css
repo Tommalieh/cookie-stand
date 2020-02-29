@@ -3,6 +3,8 @@ html{
     background-color: black;
     height: 600%;
     color: white;
+    font-family:'Noto Serif KR';
+    scroll-behavior: smooth;
 }
 
 .div{
@@ -102,7 +104,9 @@ p{
     background-color: rgba(0, 0, 0, 0.452);
     line-height: 143.5%;
     font-size: 100%;
-    
+    color: wheat;
+    line-height: 150%;
+
 }
 .col1{
     /* border: 3px solid black; */

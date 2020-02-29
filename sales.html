@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sales</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Average+Sans|Noto+Serif+KR|Zilla+Slab+Highlight&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="sales.css">
 </head>
 
@@ -22,9 +23,14 @@
         </nav>
     </header>
 
-    <form id="locationID">
+    
+    <a href="#myDIV"><button onclick="myFunction()">Add New Shop</button></a>
+
+    <div id="myDIV">
+
+    <form id="locationID" class='hide'>
         <fieldset>
-            <legend>Enter a new shop</legend>
+            <legend>Enter a New Shop</legend>
             <label for="name">Shop Name:</label>
             <input type="text" name='name' id="name" placeholder="e.g. London" required>
 
@@ -37,9 +43,11 @@
             <label for="meanValue">Average amount of cookies sold per person:</label>
             <input type="number" name='meanValue' id="meanValue" placeholder="e.g. 14" required>
 
-            <input type="submit">
+            <input type="SUBMIT">
         </fieldset>
     </form>
+</div>
+
 
 
 
